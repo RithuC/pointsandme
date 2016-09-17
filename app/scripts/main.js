@@ -5,22 +5,27 @@ var config = {
     storageBucket: "pointsandme.appspot.com",
     messagingSenderId: "48621216513"
 };
+
 firebase.initializeApp(config);
 
+
 $("#teacher").bind("click", function(event){
-   $(".login").show();
+   $(".login").removeClass('hidden');
    $("#teacher").hide();
    $("#student").hide();
+   $("#register").hide();
 });
 
 $("#student").bind("click", function(event){
-    $(".login").show();
+    $(".login").removeClass('hidden');
     $("#teacher").hide();
     $("#student").hide();
+    $("#register").hide();
 });
 
 $("#backToHome").bind("click", function(event) {
-    $(".login").hide();
+    $(".login").addClass('hidden');
     $("#teacher").show();
     $("#student").show();
+    $("#register").show();
 });

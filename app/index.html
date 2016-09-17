@@ -4,25 +4,60 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title>PointsAndMe</title>
 </head>
 <body>
-    <button id="teacher">I'm a Teacher</button>
-    <button id="student">I'm a Student</button>
+    <div class="page-header">
+        <h1>Welcome to Points and Me!</h1>
+    </div>
+    <button id="teacher" class="btn btn-primary">I'm a Teacher</button>
+    <button id="student" class="btn btn-primary">I'm a Student</button>
+    <button id="register" class="btn btn-primary">Register</button>
 
-    <input id="username" hidden class="login">
-    <input id="password" hidden class="login">
-    <button id="backToHome" hidden class="login">Go Back</button>
-    <button id="Submit" hidden class="login">Login</button>
+    <div class="input-group">
+        <label class="login hidden">Username: </label>
+        <input type="text" id="username" class="login form-control hidden">
+    </div>
+    <div class="input-group">
+        <label class="login hidden">Password: </label>
+        <input id="password" class="login form-control hidden">
+    </div>
+    <button id="backToHome" class="login btn btn-primary hidden">Go Back</button>
+    <button id="Submit" class="login btn btn-primary hidden" onclick="authenticate()">Login</button>
+    <button id="Login" class="login btn btn-primary hidden" onclick="logout()">Logout</button>
 
+    <br />
+    <br />
 
+    <ul id="students">
+        <li>Students and Names</li>
+    </ul>
+
+    <ul id="rewards">
+        <li>Rewards</li>
+    </ul>
+
+    <ul id="rewardHistory">
+        <li>Reward History</li>
+    </ul>
 <!-- Stylesheets and scripts -->
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./styles/main.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 <script src="./scripts/main.js"></script>
-
+<script src="./scripts/authenticateFirebase.js"></script>
+<script src="./scripts/teacher.js"></script>
 </body>
 </html>
