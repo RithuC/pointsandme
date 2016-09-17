@@ -1,0 +1,27 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#profileheader { 
+	background-color: yellow;
+}
+
+#profilepicture {
+	max-width: 128px;
+	margin: 20px;
+}
+
+#profilename {
+	font-size: 48pt;
+	font-weight: 800;
+}
+
+#profilestars {
+	font-size: 32pt;
+	font-weight: 800;
+}
+
+#profilepoints {
+	font-size: 32pt;
+	font-weight: 800;
+}
