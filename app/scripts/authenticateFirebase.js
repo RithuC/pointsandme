@@ -12,12 +12,32 @@ function authenticate() {
 function authStateChanged(user){
     if(user) {
         console.log("logged in with data" + user.email + " " + user.displayName);
+        loggedIn();
     }
     else {
-        loggedOut();
+       // loggedOut();
     }
 }
 
-function loggedOut(){
-    //TODO: Do shit here that returns to login page etc.
+function loggedIn(){
+    var userId = firebase.auth().currentUser.uid;
+    return firebase.database().ref('/Teachers/' + userId).once('value').then(function(snapshot) {
+        console.log(snapshot.val());
+
+        $("h1").text("Welcome " + snapshot.val().Name);
+    });
 }
+
+function logout() {
+    firebase.auth().signOut().then(function() {
+        loggedOut();
+    }, function(error) {
+        alert(error);
+    });
+}
+
+function loggedOut(){
+    // This may be quick and dirty, but it works
+    location.reload(true)
+}
+

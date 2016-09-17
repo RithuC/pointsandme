@@ -1,0 +1,14 @@
+{
+  "Teachers" : {
+    "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
+      "Name" : "Kathy Miller",
+      "Other stuff" : "Something"
+    }
+  },
+  "Students" : {
+    "137" : {
+      "Teacher" : "NyELc9d7fJdPhLYu9NrQHKZMUH72",
+      "Name" : "Tobias Lastname"
+    }
+  }
+}
