@@ -19,10 +19,8 @@ function addStudentToList(id){
     });
 }
 
-function addNewStudent(name) {
+function addNewStudent(name,newKey) {
     var userId = firebase.auth().currentUser.uid;
-
-    var newKey = firebase.database().ref('Students').push().key;
 
     var updates = {};
     updates['/Students/' + newKey] = {"Name" : name, "Teacher" : userId};
@@ -31,6 +29,29 @@ function addNewStudent(name) {
     return firebase.database().ref().update(updates);
 
 }
+
+function createStudentUser(email,password,name) {
+    var config = {
+        apiKey: "AIzaSyD-WUhW3_jInlUPmMxV7EInTxx17C0Ba74",
+        authDomain: "pointsandme.firebaseapp.com",
+        databaseURL: "https://pointsandme.firebaseio.com",
+        storageBucket: "pointsandme.appspot.com",
+        messagingSenderId: "48621216513"
+    };
+
+    var secondaryApp = firebase.initializeApp(config, "Secondary");
+
+    secondaryApp.auth().createUserWithEmailAndPassword(email, password).then(function(firebaseUser) {
+        var newKey =  firebaseUser.uid;
+
+        console.log("User " + firebaseUser.uid + " created successfully!");
+        //I don't know if the next statement is necessary
+        secondaryApp.auth().signOut();
+
+        addNewStudent(name,newKey)
+    });
+}
+
 
 function updateRewards(){
     var userId = firebase.auth().currentUser.uid;
