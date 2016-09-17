@@ -3,6 +3,14 @@
     "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
       "Name" : "Kathy Miller",
       "Other stuff" : "Something",
+      "Classes" : {
+          "u9rher9ejf" : true
+      }
+    }
+  },
+  "Classes" : {
+    "u9rher9ejf" : {
+      "Name" : "Grade 3 (2016)",
       "Students" : {
         "137": true,
         "42" : true
@@ -11,16 +19,16 @@
   },
   "Students" : {
     "137" : {
-      "Teacher" : "NyELc9d7fJdPhLYu9NrQHKZMUH72",
+      "Class" : "u9rher9ejf",
       "Name" : "Tobias Lastname"
     },
     "42" : {
-      "Teacher" : "NyELc9d7fJdPhLYu9NrQHKZMUH72",
+      "Class" : "u9rher9ejf",
       "Name" : "Jon Snow"
     }
   },
   "Achievements" : {
-    "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
+    "u9rher9ejf" : {
       "hiewhgow" : {
         "Name" : "Maple Reader",
         "Category" : "hwfiowehgd7495",
@@ -34,7 +42,7 @@
     }
   },
   "Rewards" : {
-    "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
+    "u9rher9ejf" : {
       "gHLYZ5" : {
         "Points" : 500,
         "Name" : "The most amazing reward ever"
@@ -43,7 +51,7 @@
   },
   "RewardsRequested" : {
     "uiguifghN" : {
-      "Teacher" : "NyELc9d7fJdPhLYu9NrQHKZMUH72",
+      "Class" : "u9rher9ejf",
       "Reward" : "gHLYZ5",
       "Pending" : false,
       "Student" : "42",
@@ -55,9 +63,9 @@
       "uiguifghN" : true
     }
   },
-  "RewardsPerTeacher" : {
+  "RewardsPerClass" : {
     "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
-      "uiguifghN" : true
+      "u9rher9ejf" : true
     }
   }
 }
