@@ -1,0 +1,42 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: #ffba3d!important;
+	color: white;
+}
+
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn .btn-primary{
+	background-color: #1b6d85!important;
+	background-image: none!important;
+}
+
+.page-header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -80px;	
+}
+
+.page-header {
+	font-size: 48pt;
+	font-weight: 800;
+	text-align: center;
+}
+
+.login-form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+}
+
+#username {
+	background-color: red;
+	text-align: center;
+}
