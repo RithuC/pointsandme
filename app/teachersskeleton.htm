@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PointsAndMe</title>
+
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+       <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/teacherstyle.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+</head>
+
+
+	<body>
+	<div id="classespage">
+	<h1 id="teachershomepage"> Classes <h1>
+	
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                	<span class="glyphicon glyphicon-fire"></span> 
+                	Hello Teacher
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                 <li class="active">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="about-us">
+							<li><a href="#">Engage</a></li>
+							<li><a href="#">Pontificate</a></li>
+							<li><a href="#">Synergize</a></li>
+						</ul>
+					</li> 
+                </ul>
+
+				<!-- Search -->
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-default">Search</button>
+				</form>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+	<div id="table-wrapper" >
+		<div id="table-scroll" class="container">
+			 <table style="width:100%">
+			  <tr>
+			    <th>Year</th>
+			    <th>Class name </th>
+			    <th>Number of Students</th>
+			    <th> </th>
+			  </tr>
+			  <tr>
+			    <td>2016</td>
+			    <td>Grade 3</td>
+			    <td>30</td>
+			    <td>  <button id="class1" type="button"><span class="glyphicon glyphicon-chevron-right"></button>  </td>
+			  </tr>
+			  <tr>
+			    <td>2015</td>
+			    <td>Grade 1</td>
+			    <td>25</td>
+			    <td>  <button id="class2" type="button"><span class="glyphicon glyphicon-chevron-right"></button>  </td>
+			  </tr>
+			</table> 
+		</div>
+	</div>
+
+	<script src="js/teacherfunctions.js"> 
+	</script>
+
+    <!-- Content -->
+    <div id="thecontent" class="container animated fadeIn">
+    	<h1 id> Back to classes  </h1>
+
+        <!-- Heading -->
+        <div class="row">
+
+          <ul class="nav nav-tabs">
+		    <li id="studentstabbanner" class="tablinks active"><a data-toggle="tab" href="#studentslist">Students</a></li>
+		    <li><a data-toggle="tab" href="#achievementslist">Achievements</a></li>
+		    <li><a data-toggle="tab" href="#rewardslist">Rewards</a></li>
+		  </ul>
+
+		  <div class="tab-content">
+		  	<div id="studentslist" class="tab-pane active">
+		  	<table style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th>Points </th>
+			    <th> Rewards pending </th>
+			    <th> Achievements Pending </th>
+			  </tr>
+			  <tr>
+			    <td>Billy</td>
+			    <td>119</td>
+			    <td>33</td>
+			    <td> This, and, that, this, and, that</td>
+			  </tr>
+			  <tr>
+				<td>Sally</td>
+			    <td>12</td>
+			    <td>323</td>
+			    <td> This, and, that, this, and, that</td>
+			  </tr>
+			</table>
+			</div> <!--studentslist -->
+		<div id="achievementslist" class="tab-pane fade">
+			<h2> Achievement</h2>
+			<table id="achievementtable" style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th> Category </th>
+			    <th> Points </th>
+			    <th> Description </th>
+			  </tr>
+			  <tr>
+			    <td>Maple Reader</td>
+			    <td>English</td>
+			    <td>33</td>
+			    <td> Read 17 books</td>
+			  </tr>
+			  <tr>
+				<td>Math Wizard</td>
+			    <td>12</td>
+			    <td>123</td>
+			    <td> 10 per math scores</td>
+			  </tr>
+			</table>
+			<h2> Optional Tasks</h2>
+			<table id="optionaltasks" style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th> Category </th>
+			    <th> Points </th>
+			    <th> Description </th>
+			  </tr>
+			  <tr>
+			    <td>Complete feat</td>
+			    <td>English</td>
+			    <td>10</td>
+			    <td> Finished daily homework</td>
+			  </tr>
+			  <tr>
+			    <td>Teaching buddy</td>
+			    <td>English</td>
+			    <td>5</td>
+			    <td> Assisting the teacher with something</td>
+			  </tr>
+			</table>
+			<h2> Grand achievement</h2>
+			<table id="optionaltasks" style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th> Points </th>
+			    <th> Description </th>
+			  </tr>
+			  <tr>
+			    <td>Piazza Lunch</td>
+			    <td>310</td>
+			    <td> Provide class with a free lunch</td>
+			  </tr>
+			  <tr>
+			    <td>Pladium trip</td>
+			    <td>435</td>
+			    <td> Trip to Pladium</td>
+			  </tr>
+			</table>
+		</div><!--achievementslist -->
+		<div id="rewardslist" class="tab-pane fade">
+			<table style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th> Quanity Owed </th>
+			    <th> Description </th>
+			    <th> Point Value </th>
+			    <th> Who Won </th>
+			  </tr>
+			  <tr>
+			    <td>Teddy Bear</td>
+			    <td>12</td>
+			    <th>Brown fluffy bear </td>
+			    <td>119</td>
+			    <td> Them, him, her they, Sally </td>
+			  </tr>
+			  <tr>
+			    <td>Beyblade</td>
+			    <td>11</td>
+			    <th>Spinning top </td>
+			    <td>200</td>
+			    <td> Them, him, her they, Sally </td>
+			  </tr>
+			</table>
+		</div> <!--rewardslist -->
+	</div> <!--thecontent-->
+
+
+    </div> <!-- classespage -->
+
+        <!-- Feature Row -->
+ 
+
+    </div>
+    <!-- /.container -->
+        
+	
+	<footer>
+
+        <div class="small-print">
+        	<div class="container">
+        		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+        		<p>Copyright &copy; pointsand.me 2016 </p>
+        	</div>
+        </div>
+	</footer>
+
+	
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="js/holder.min.js"></script>
+	
+</body>
+
+</html>
