@@ -3,28 +3,20 @@
 <head>
     <title>PointsAndMe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Our Style Sheets -->
     <link rel="stylesheet" href="../styles.css">
+    <!------------------------------------------------------------------------->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- 1. Load libraries -->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <!-- IE required polyfill
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/@angular/core/bundles/core.umd.js"></script>
-    <script src="node_modules/@angular/common/bundles/common.umd.js"></script>
-    <script src="node_modules/@angular/compiler/bundles/compiler.umd.js"></script>
-    <script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.js"></script>
-    <script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script>
-    -->
-
+    <!-------------------------------------------------------------------------->
+    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!--------------------------------------------------------------------------->
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <!---------------------------------------------------------------------------->
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
@@ -32,7 +24,10 @@
 
 
     <!-- 2. Load our 'modules' -->
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
     <script src="../app/app.module.js"></script>
+    <script src="../app/app.routes.js"></script>
     <script src='../app/controllers/mainController.js'></script>
     <script src="../app/controllers/authenticateFirebase.js"></script>
 
