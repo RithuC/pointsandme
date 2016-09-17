@@ -17,7 +17,7 @@
 
 <body>
 	<!-- Navigation bar start -->
-	<div class="container-fluid">
+	<div class="container-fluid"  ng-app="myApp"  ng-controller="studentCtrl">
 		<div class="row">
 			<div class="col-md-12">
 				
@@ -28,7 +28,7 @@
 					</div>
 
 					<ul class="nav navbar-nav navbar-left">
-						<li><a>Adam Leung</a></li>
+						<li><a>{{Name}}</a></li>
 						<li><a><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
 						<li><a>30 Stars</a></li>
 						<li><a><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span></a></li>
