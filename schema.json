@@ -4,7 +4,8 @@
       "Name" : "Kathy Miller",
       "Other stuff" : "Something",
       "Students" : {
-        "137": true
+        "137": true,
+        "42" : true
       }
     }
   },
@@ -12,6 +13,10 @@
     "137" : {
       "Teacher" : "NyELc9d7fJdPhLYu9NrQHKZMUH72",
       "Name" : "Tobias Lastname"
+    },
+    "42" : {
+      "Teacher" : "NyELc9d7fJdPhLYu9NrQHKZMUH72",
+      "Name" : "Jon Snow"
     }
   }
 }
