@@ -18,5 +18,32 @@
       "Teacher" : "NyELc9d7fJdPhLYu9NrQHKZMUH72",
       "Name" : "Jon Snow"
     }
+  },
+  "Rewards" : {
+    "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
+      "gHLYZ5" : {
+        "Points" : 500,
+        "Name" : "The most amazing reward ever"
+      }
+    }
+  },
+  "RewardsRequested" : {
+    "uiguifghN" : {
+      "Teacher" : "NyELc9d7fJdPhLYu9NrQHKZMUH72",
+      "Reward" : "gHLYZ5",
+      "Pending" : false,
+      "Student" : "42",
+      "Timestamp" : "1474130981"
+    }
+  },
+  "RewardsPerStudent" : {
+    "42" : {
+      "uiguifghN" : true
+    }
+  },
+  "RewardsPerTeacher" : {
+    "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
+      "uiguifghN" : true
+    }
   }
 }

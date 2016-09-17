@@ -25,6 +25,7 @@ function loggedIn(){
         console.log(snapshot.val());
 
         updateStudents(snapshot.val());
+        updateRewards();
 
         $("h1").text("Welcome " + snapshot.val().Name);
     });
