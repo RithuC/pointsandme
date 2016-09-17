@@ -56,31 +56,13 @@
 
 <!-- 3. Display the application -->
 <body>
-	<div class="container" ng-app="myApp" ng-controller="myCtrl">
-		<div class="page-header">
-			<img src="../img/Logo.png">
-			<br>Welcome,
-		</div>
-		<div class="login-form">
-			<div ng-if="initial">
-				<button id="teacher" class="btn btn-primary" ng-click="userType('teacher')">I'm a Teacher</button>
-				<button id="student" class="btn btn-primary" ng-click="userType('student')">I'm a Student</button>
-				<button id="register" class="btn btn-primary" ng-click="">Register</button>
-			</div>
-			<form ng-if="isTeacher || isStudent">
-			<div class="input-group">
-				<label class="login">Username: </label>
-				<input type="text" id="username" class="login form-control">
-			</div>
-			<div class="input-group">
-				<label class="login">Password: </label>
-				<input id="password" class="login form-control">
-			</div>
-			<button id="backToHome" class="login btn btn-primary" ng-click="userType('goBack')">Go Back</button>
-				<button ng-controller="authenticateCtrl" id="Submit" class="login btn btn-primary" ng-click="authenticate()">Login</button>
-			</form>
-		</div>
-	</div>
+
+
+
+<div class="container" ng-app="myApp" ng-controller="myCtrl">
+	<div ng-view></div>
+
+	<a href="#dashboard">Click</a>
 </body>
 
 </html>
