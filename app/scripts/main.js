@@ -8,6 +8,7 @@ var config = {
 
 firebase.initializeApp(config);
 
+
 $("#teacher").bind("click", function(event){
    $(".login").show();
    $("#teacher").hide();
