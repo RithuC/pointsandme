@@ -14,6 +14,7 @@
 
 ## Students
 ###### Login
+###### Customize profile
 ###### View achievements
 ###### View and claim rewards
 ###### "Social media" (Email to parents etc)
