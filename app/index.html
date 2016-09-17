@@ -13,7 +13,7 @@
     <input id="username" hidden class="login">
     <input id="password" hidden class="login">
     <button id="backToHome" hidden class="login">Go Back</button>
-    <button id="Submit" hidden class="login">Login</button>
+    <button id="Submit" hidden class="login" onclick="authenticate()">Login</button>
 
 
 <!-- Stylesheets and scripts -->
@@ -23,6 +23,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 <script src="./scripts/main.js"></script>
-
+<script src="./scripts/authenticateFirebase.js"></script>
 </body>
 </html>
