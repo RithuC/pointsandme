@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PointsAndMe</title>
+
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+       <!-- Bootstrap Core CSS -->
+    <link href="../app/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../app/css/animate.css">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="../app/css/teacherstyle.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+</head>
+
+<div id="classespage">
+<h1> Classes <h1>
+
+	<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                	<span class="glyphicon glyphicon-fire"></span> 
+                	Hello Teacher
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                 <li class="active">
+                  <!--      <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Products</a>
+                    </li>-->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="about-us">
+							<li><a href="#">Engage</a></li>
+							<li><a href="#">Pontificate</a></li>
+							<li><a href="#">Synergize</a></li>
+						</ul>
+					</li> 
+                </ul>
+
+				<!-- Search -->
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-default">Search</button>
+				</form>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+	<div class="jumbotron feature">
+		<div class="container">
+			<!-- DELETE <h1><span class="glyphicon glyphicon-equalizer"></span> Dramatically Engage</h1>-->
+			 <table style="width:100%">
+			  <tr>
+			    <th>Year</th>
+			    <th>Class name </th>
+			    <th>Number of Students</th>
+			    <th> </th>
+			  </tr>
+			  <tr>
+			    <td>2016</td>
+			    <td>Grade 3</td>
+			    <td>30</td>
+			    <td>  <button id="class1" type="button"><span class="glyphicon glyphicon-chevron-right"></button>  </td>
+			  </tr>
+			  <tr>
+			    <td>2015</td>
+			    <td>Grade 1</td>
+			    <td>25</td>
+			    <td>  <button id="class2" type="button"><span class="glyphicon glyphicon-chevron-right"></button>  </td>
+			  </tr>
+			</table> 
+			<!-- DELETE <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p> -->
+			<!-- DELETE <p><a class="btn btn-default" href="#">Engage Now</a></p> -->
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+		    $("#class1").click(function(){
+		    	$("#thecontent").show();
+		        
+		    });
+		    $("#class2").click(function(){
+		        $("#thecontent").hide();
+		    });
+		});
+	</script>
+
+    <!-- Content -->
+    <div id="thecontent" class="container animated fadeIn">
+
+        <!-- Heading -->
+        <div class="row">
+          <!-- DELETE   <div class="col-lg-12">
+                <h1 class="page-header">Superior Collaboration
+                    <small>Visualize Quality</small>
+                </h1>
+                <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.</p>
+            </div>
+        </div> -->
+
+          <ul class="nav nav-tabs">
+		    <!-- <li class="active"><a href="#">Home</a></li> -->
+		    <li class="tablinks active"><a data-toggle="tab" href="#studentslist">Students</a></li>
+		    <li><a data-toggle="tab" href="#achievementslist">Achievements</a></li>
+		    <li><a data-toggle="tab" href="#rewardslist">Rewards</a></li>
+		  </ul>
+
+		  <div class="tab-content">
+		  	<div id="studentslist" class="tab-pane active">
+		  	<table style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th>Points </th>
+			    <th> Rewards pending </th>
+			    <th> Achievements Pending </th>
+			  </tr>
+			  <tr>
+			    <td>Billy</td>
+			    <td>119</td>
+			    <td>33</td>
+			    <td> This, and, that, this, and, that</td>
+			  </tr>
+			  <tr>
+				<td>Sally</td>
+			    <td>12</td>
+			    <td>323</td>
+			    <td> This, and, that, this, and, that</td>
+			  </tr>
+			</table>
+			</div> <!--studentslist -->
+		<div id="achievementslist" class="tab-pane fade">
+			<h1> Achievements</h1>
+			<table id="achievementtable" style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th> Category </th>
+			    <th> Points </th>
+			    <th> Description </th>
+			  </tr>
+			  <tr>
+			    <td>Maple Reader</td>
+			    <td>English</td>
+			    <td>33</td>
+			    <td> Read 17 books</td>
+			  </tr>
+			  <tr>
+				<td>Math Wizard</td>
+			    <td>12</td>
+			    <td>123</td>
+			    <td> 10 per math scores</td>
+			  </tr>
+			</table>
+			<h2> Optional Tasks</h2>
+			<table id="optionaltasks" style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th> Category </th>
+			    <th> Points </th>
+			    <th> Description </th>
+			  </tr>
+			  <tr>
+			    <td>Complete feat</td>
+			    <td>English</td>
+			    <td>10</td>
+			    <td> Finished daily homework</td>
+			  </tr>
+			  <tr>
+			    <td>Teaching buddy</td>
+			    <td>English</td>
+			    <td>5</td>
+			    <td> Assisting the teacher with something</td>
+			  </tr>
+			</table>
+			<h2> Grand achievement</h2>
+			<table id="optionaltasks" style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th> Points </th>
+			    <th> Description </th>
+			  </tr>
+			  <tr>
+			    <td>Piazza Lunch</td>
+			    <td>310</td>
+			    <td> Provide class with a free lunch</td>
+			  </tr>
+			  <tr>
+			    <td>Pladium trip</td>
+			    <td>435</td>
+			    <td> Trip to Pladium</td>
+			  </tr>
+			</table>
+		</div><!--achievementslist -->
+		<div id="rewardslist" class="tab-pane fade">
+			<table style="width:100%">
+			  <tr>
+			    <th>Name</th>
+			    <th> Quanity Owed </th>
+			    <th> Description </th>
+			    <th> Point Value </th>
+			    <th> Who Won </th>
+			  </tr>
+			  <tr>
+			    <td>Teddy Bear</td>
+			    <td>12</td>
+			    <th>Brown fluffy bear </td>
+			    <td>119</td>
+			    <td> Them, him, her they, Sally </td>
+			  </tr>
+			  <tr>
+			    <td>Beyblade</td>
+			    <td>11</td>
+			    <th>Spinning top </td>
+			    <td>200</td>
+			    <td> Them, him, her they, Sally </td>
+			  </tr>
+			</table>
+		</div>
+		</div> <!--tab-contents -->
+
+        <!-- /.row -->
+
+</div> <!-- classespage -->
+
+        <!-- Feature Row -->
+     <!-- DELETE   <div class="row">
+            <article class="col-md-4 article-intro">
+                <a href="#">
+                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
+                </a>
+                <h3>
+                    <a href="#">Efficiently Unleash</a>
+                </h3>
+                <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+            </article>
+            <article class="col-md-4 article-intro">
+                <a href="#">
+                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
+                </a>
+                <h3>
+                    <a href="#">Completely Synergize</a>
+                </h3>
+                <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</p>
+            </article>
+
+            <article class="col-md-4 article-intro">
+                <a href="#">
+                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
+                </a>
+                <h3>
+                    <a href="#">Dynamically Procrastinate</a>
+                </h3>
+                <p>Professionally cultivate one-to-one customer service with robust ideas. Completely synergize resource taxing relationships via premier niche markets. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+            </article>
+        </div> -->
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+        
+	
+	<footer>
+		<!-- DELETE
+		<div class="footer-blurb">
+			<div class="container"> -->
+			<!-- DELETE	<div class="row">
+					<div class="col-sm-4 footer-blurb-item">
+						<h3><span class="glyphicon glyphicon-fire"></span> Dynamically Procrastinate</h3>
+						<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+						<p><a class="btn btn-default" href="#">Procrastinate</a></p>
+					</div>
+					<div class="col-sm-4 footer-blurb-item">
+						<h3><span class="glyphicon glyphicon-cloud-upload"></span> Efficiently Unleash</h3>
+						<p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. </p>
+						<p><a class="btn btn-default" href="#">Unleash</a></p>
+					</div>
+					<div class="col-sm-4 footer-blurb-item">
+						<h3><span class="glyphicon glyphicon-leaf"></span> Completely Synergize</h3>
+						<p>Professionally cultivate one-to-one customer service with robust ideas. Completely synergize resource taxing relationships via premier niche markets. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+						<p><a class="btn btn-default" href="#">Synergize</a></p>
+					</div>
+
+				</div> -->
+				<!-- /.row -->	
+			<!-- DELETE </div>
+        </div> -->
+
+        
+        <div class="small-print">
+        	<div class="container">
+        		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+        		<p>Copyright &copy; pointsand.me 2016 </p>
+        	</div>
+        </div>
+	</footer>
+
+	
+    <!-- jQuery -->
+    <script src="../app/js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../app/js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="../app/js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="../app/js/holder.min.js"></script>
+	
+</body>
+
+</html>
