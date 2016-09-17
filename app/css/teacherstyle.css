@@ -4,13 +4,17 @@ body {
 	}
 	
 h1, h2, h3, h4, h5, h6 {
+	padding: 10px 30px 30px 50px;
 	color: black;
 	}
 	
 .feature {
-	border-style: solid;
-    border-color: #7f33cc;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+
 	}
+
+
 	
 .article-intro {
     margin-bottom: 25px;
@@ -29,4 +33,45 @@ h1, h2, h3, h4, h5, h6 {
 .small-print {
 	background-color: #fff;
 	padding: 30px 0;
-}s
+}
+
+
+#table-wrapper {
+  position:relative;
+	border-style: solid;
+    border-color: #7f33cc;
+    height: 200px;
+}
+
+#table-scroll {
+  height:150px;
+  overflow:auto;
+  margin-top:20px;  
+}
+#table-wrapper table {
+  width:100%;
+}
+
+#table-wrapper table * {
+  color:black;
+}
+#table-wrapper table thead th .text {
+  position:absolute;   
+  top:-20px;
+  height:20px;
+  width:35%;
+
+}
+
+#table-wrapper table td .text {
+  position:absolute;   
+  top:-20px;
+  height:20px;
+  width:35%;
+  padding-bottom: 20px;
+
+}
+#table-wrapper table td {
+padding-bottom: 20px;
+
+}
