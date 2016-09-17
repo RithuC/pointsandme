@@ -17,10 +17,10 @@ body {
 }
 
 .page-header img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -80px;	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -80px;	
 }
 
 .page-header {
@@ -29,14 +29,17 @@ body {
 	text-align: center;
 }
 
-.login-form {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#login-form {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
+	float: center;
 }
 
-#username {
-	background-color: red;
-	text-align: center;
+.input-group {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
 }
