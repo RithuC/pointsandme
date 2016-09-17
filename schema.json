@@ -2,7 +2,10 @@
   "Teachers" : {
     "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
       "Name" : "Kathy Miller",
-      "Other stuff" : "Something"
+      "Other stuff" : "Something",
+      "Students" : {
+        "137": true
+      }
     }
   },
   "Students" : {

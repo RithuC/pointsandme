@@ -24,6 +24,8 @@ function loggedIn(){
     return firebase.database().ref('/Teachers/' + userId).once('value').then(function(snapshot) {
         console.log(snapshot.val());
 
+        updateStudents(snapshot.val());
+
         $("h1").text("Welcome " + snapshot.val().Name);
     });
 }
