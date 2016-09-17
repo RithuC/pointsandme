@@ -19,6 +19,20 @@
       "Name" : "Jon Snow"
     }
   },
+  "Achievements" : {
+    "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
+      "hiewhgow" : {
+        "Name" : "Maple Reader",
+        "Category" : "hwfiowehgd7495",
+        "Description" : "Read 17 books"
+      }
+    }
+  },
+  "Categories" : {
+    "hwfiowehgd7495" : {
+      "Name" : "English"
+    }
+  },
   "Rewards" : {
     "NyELc9d7fJdPhLYu9NrQHKZMUH72" : {
       "gHLYZ5" : {
