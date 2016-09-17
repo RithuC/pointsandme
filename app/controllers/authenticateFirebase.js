@@ -1,6 +1,4 @@
-app.controller('authenticateCtrl', function($scope, $location) {
-
-
+app.controller('authenticateCtrl', function($scope, $location, $window) {
 
     $scope.authenticate = function () {
         var email = $('#username').val();
@@ -9,6 +7,7 @@ app.controller('authenticateCtrl', function($scope, $location) {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(function(response) {
                 console.log(response);
+                console.log($window.location.href);
                 $location.path("dashboard.html");
             })
             .catch(function (error) {
