@@ -5,6 +5,7 @@ var config = {
     storageBucket: "pointsandme.appspot.com",
     messagingSenderId: "48621216513"
 };
+
 firebase.initializeApp(config);
 
 $("#teacher").bind("click", function(event){

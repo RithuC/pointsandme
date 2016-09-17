@@ -38,11 +38,15 @@
     </div>
     <button id="backToHome" class="login btn btn-primary hidden">Go Back</button>
     <button id="Submit" class="login btn btn-primary hidden">Login</button>
+    <input id="username" hidden class="login">
+    <input id="password" hidden class="login">
+    <button id="backToHome" hidden class="login">Go Back</button>
+    <button id="Submit" hidden class="login" onclick="authenticate()">Login</button>
 
 
 <!-- Stylesheets and scripts -->
 
 <script src="./scripts/main.js"></script>
-
+<script src="./scripts/authenticateFirebase.js"></script>
 </body>
 </html>
