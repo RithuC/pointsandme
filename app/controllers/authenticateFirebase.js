@@ -9,10 +9,6 @@ app.controller('authenticateCtrl', function($scope, $location, $window) {
                 console.log(response);
                 console.log($window.location.href);
 
-                $scope.$apply(function(){
-                    $location.path("dashboard");
-
-                });
             })
             .catch(function (error) {
                 alert(error);
@@ -33,6 +29,16 @@ app.controller('authenticateCtrl', function($scope, $location, $window) {
         var userId = firebase.auth().currentUser.uid;
         return firebase.database().ref('/Teachers/' + userId).once('value').then(function(snapshot) {
             console.log(snapshot.val());
+            if(snapshot.val()){
+                $scope.$apply(function(){
+                    $location.path("teacherPage");
+                });
+            }
+            else {
+                $scope.$apply(function(){
+                    $location.path("studentPage");
+                });
+            }
 
             //updateStudents(snapshot.val());
             //updateRewards();

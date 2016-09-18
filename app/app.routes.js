@@ -5,12 +5,11 @@ app.config(function($routeProvider) {
             templateUrl : "indexContent.html",
             controller : "myCtrl"
         })
-        .when("/dashboard", {
-            templateUrl : "dashboard.html",
-            controller : ""
+        .when("/teacherPage", {
+            templateUrl : "teachersskeleton.htm"
         })
-        .when("/studentDEBUG", {
+        .when("/studentPage", {
             templateUrl : "StudentPage.html",
             controller : "studentCtrl"
-    });
+        });
 });
