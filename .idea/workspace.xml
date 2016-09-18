@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cedd54a2-0208-4d0c-af1b-06d704915b40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/StudentStyle.css" afterPath="$PROJECT_DIR$/css/StudentStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/studentController.js" afterPath="$PROJECT_DIR$/app/controllers/studentController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/StudentPage.html" afterPath="$PROJECT_DIR$/views/StudentPage.html" />
     </list>
     <ignored path="pointsandme.iws" />
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentPage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StudentPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/StudentPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="59" column="154" selection-start-line="59" selection-start-column="154" selection-end-line="59" selection-end-column="154" />
+            <state relative-caret-position="105">
+              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -76,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="studentController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="studentController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/studentController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="195">
+              <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -150,9 +150,9 @@
         <option value="$PROJECT_DIR$/app/app.routes.js" />
         <option value="$PROJECT_DIR$/app/controllers/authenticateFirebase.js" />
         <option value="$PROJECT_DIR$/views/indexContent.html" />
-        <option value="$PROJECT_DIR$/app/controllers/studentController.js" />
         <option value="$PROJECT_DIR$/css/StudentStyle.css" />
         <option value="$PROJECT_DIR$/views/StudentPage.html" />
+        <option value="$PROJECT_DIR$/app/controllers/studentController.js" />
       </list>
     </option>
   </component>
@@ -166,6 +166,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-12" />
     <option name="y" value="23" />
     <option name="width" value="1260" />
     <option name="height" value="669" />
@@ -396,15 +397,15 @@
       <updated>1474096956732</updated>
       <workItem from="1474096960598" duration="21890000" />
       <workItem from="1474161519354" duration="2658000" />
-      <workItem from="1474170914052" duration="6678000" />
+      <workItem from="1474170914052" duration="7815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31226000" />
+    <option name="totallyTimeSpent" value="32363000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1260" height="669" extended-state="0" />
+    <frame x="-12" y="23" width="1260" height="669" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24939467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -669,14 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/studentController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/StudentStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -687,8 +680,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/StudentPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="59" column="154" selection-start-line="59" selection-start-column="154" selection-end-line="59" selection-end-column="154" />
+        <state relative-caret-position="105">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/studentController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
           <folding />
         </state>
       </provider>
