@@ -93,6 +93,26 @@ app.controller('teacherCtrl', function ($scope, $timeout, $window, $location) {
         });
     });
 
+    firebase.database().ref('/RequestedRewards').once('value').then(function (snapshot) {
+        var rewards = snapshot.val();
+
+
+        var reward_list = [];
+        for (var key in rewards) {
+            if (rewards.hasOwnProperty(key)) {
+                reward_list.push({
+                    "Name": rewards[key].Reward,
+                    "Student": rewards[key].Student,
+                });
+            }
+
+        }
+
+        $timeout(function () {
+            $scope.ReRewards = reward_list;
+        });
+    });
+
     firebase.database().ref('/Achievements/' + userId).once('value').then(function (snapshot) {
         var achievements = snapshot.val();
 
