@@ -77,6 +77,7 @@ app.controller('studentCtrl',  function($scope, $timeout, $window, $location) {
     $scope.redeem = function (cost, item) {
         $scope.Points = $scope.Points - cost;
         alert('You have redeemed ' + item + '!');
+        firebase.database().ref('/Students/' + userId +'/Points').set($scope.Points);
     };
 
     $scope.logout = function() {
