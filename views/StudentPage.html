@@ -10,8 +10,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="../css/StudentStyle.css">
+	<link rel="stylesheet" href="../app/css/animate.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="../app/js/bootstrap.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 </head>
 
@@ -27,7 +29,7 @@
 						<span class="navbar-brand" href="#"><img src="../img/profile.png" alt="You!" id="profile-picture"></span>
 					</div>
 
-					<ul class="nav navbar-nav navbar-left">
+					<ul class="nav navbar-nav nav-tabs navbar-left">
 						<li><a>{{Name}}</a></li>
 						<li><a><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
 						<li><a>30 Stars</a></li>
@@ -36,10 +38,10 @@
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#">Rewards</a></li>
-						<li><a href="#">Achievements</a></li>
-						<li><a href="#">Tasks</a></li>
-						<li><a href="#">Logout</a></li>
+						<li class="active"><a data-toggle="tab" href="#rewards">Rewards</a></li>
+						<li><a data-toggle="tab" href="#achievements">Achievements</a></li>
+						<!-- <li><a data-toggle="tab" href="#">Tasks</a></li> -->
+						<li><a data-toggle="tab" href="#">Logout</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -48,49 +50,55 @@
 	<!-- Navigation bar end -->
 
 	<!-- Content begins -->
+	<div class="tab-content">
 
-	<!-- Rewards begins-->
-<!-- 	<div class="container-fluid content">
-		<div class="row" id="reward">
-			<span class="col-md-2">
-				<span class="horizontal-center"><img src="../img/pizza.png" id="reward-picture"></span>
-			</span>
-			<span class="col-md-8">
-				<span class="row">
-					<span id="reward-title">Pizza</span>
+		<!-- Rewards begins-->
+		<div class="container-fluid content tab-pane fade in active" id="rewards">
+			<div class="row" id="reward">
+				<span class="col-md-2">
+					<span class="horizontal-center"><img src="../img/pizza.png" id="reward-picture"></span>
 				</span>
-				<span class="row">
-					<span id="reward-cost"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> 200 Points</span>
-				</span>
+				<span class="col-md-8">
+					<span class="row">
+						<span id="reward-title">Pizza</span>
+					</span>
+					<span class="row">
+						<span id="reward-cost"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> 200 Points</span>
+					</span>
 
-			</span>
-			<span class="col-md-2">
-				<span class="row">
-					<button id="reward-purchase-button">
-						<span class="horizontal-center"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></span>
-					</button>
 				</span>
-			</span>
+				<span class="col-md-2">
+					<span class="row">
+						<button id="reward-purchase-button">
+							<span class="horizontal-center"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></span>
+						</button>
+					</span>
+				</span>
+			</div>
+			
 		</div>
-	</div> -->
-	<!-- Rewards ends -->
-	<div class="container-fluid content">
-		<div class="row">
-			<div class="col-md-4 achieved">
-				<img src="../img/pizza.png" id="achievement-picture">
-				<b id="achievement-title">Name of Achievement</b>
-			</div>
-			<div class="col-md-4 not-achieved">
-				<img src="../img/question.png" id="achievement-picture">
-				<b id="achievement-title">Name of Achievement</b>
-			</div>
-			<div class="col-md-4 not-achieved">
-				<img src="../img/question.png" id="achievement-picture">
-				<b id="achievement-title">Name of Achievement</b>
+		<!-- Rewards ends -->
+
+		<!-- Achievements begins-->
+		<div id="achievements" class="container-fluid content tab-pane fade">
+			<div class="row">
+				<div class="col-md-4 achieved">
+					<img src="../img/pizza.png" id="achievement-picture">
+					<b id="achievement-title">Name of Achievement</b>
+				</div>
+				<div class="col-md-4 not-achieved">
+					<img src="../img/question.png" id="achievement-picture">
+					<b id="achievement-title">Name of Achievement</b>
+				</div>
+				<div class="col-md-4 not-achieved">
+					<img src="../img/question.png" id="achievement-picture">
+					<b id="achievement-title">Name of Achievement</b>
+				</div>
 			</div>
 		</div>
+		<!-- Achievements end-->
+
 	</div>
-	<!-- Achievements begins-->
-	<!-- Achievements begins-->
+	<!-- Content ends -->
 </body>
 
