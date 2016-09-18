@@ -1,5 +1,7 @@
 app.controller('studentCtrl',  function($scope, $timeout, $window, $location) {
     $scope.Name = null;
+    $scope.Points = null;
+
 
     if(!firebase.auth().currentUser) {
         $window.location.href = "/views";
@@ -62,6 +64,11 @@ app.controller('studentCtrl',  function($scope, $timeout, $window, $location) {
             });
         });
     });
+
+    $scope.redeem = function (cost, item) {
+        $scope.Points = $scope.Points - cost;
+        alert('You have redeemed ' + item + '!');
+    };
 
     $scope.logout = function() {
         firebase.auth().signOut().then(function() {
