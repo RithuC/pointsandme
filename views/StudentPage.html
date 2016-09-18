@@ -56,20 +56,24 @@
 		<div class="container-fluid content tab-pane fade in active" id="rewards" ng-repeat="x in Rewards">
 			<div class="row" id="reward">
 				<span class="col-md-2">
-					<span class="horizontal-center"><img src="../img/pizza.png" id="reward-picture"></span>
+					<span class="horizontal-center"><img ng-if="x.Name === 'Candy'" src="../img/Lollipop_Icon.png" id="reward-picture">
+													<img ng-if="x.Name === 'The most amazing reward ever'" src="../img/Movie_Icon.png" id="reward-picture">
+					</span>
 				</span>
 				<span class="col-md-8">
 					<span class="row">
 						<span id="reward-title">{{x.Name}}</span>
 					</span>
 					<span class="row">
-						<span id="reward-cost"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> {{x.Points}} Points</span>
+						<span id="reward-cost"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+							<span ng-if="Points < x.Points">{{Points}} / </span>{{x.Points}} Points</span>
+							<span id="redeem" ng-if="Points >= x.Points">(You can redeem this reward!)</span>
 					</span>
 
 				</span>
 				<span class="col-md-2">
 					<span class="row">
-						<button id="reward-purchase-button">
+						<button ng-disabled="Points < x.Points" id="reward-purchase-button">
 							<span class="horizontal-center"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></span>
 						</button>
 					</span>
