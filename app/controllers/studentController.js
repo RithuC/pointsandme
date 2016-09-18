@@ -1,4 +1,4 @@
-app.controller('studentCtrl',  function($scope, $timeout, $window) {
+app.controller('studentCtrl',  function($scope, $timeout, $window, $location) {
     $scope.Name = null;
 
     var userId = firebase.auth().currentUser.uid;
@@ -9,4 +9,13 @@ app.controller('studentCtrl',  function($scope, $timeout, $window) {
             $scope.Name = snapshot.val().Name;
         });
     });
+
+    $scope.logout = function() {
+        firebase.auth().signOut().then(function() {
+            $window.location.href = "/views";
+        }, function(error) {
+            alert(error);
+        });
+    };
+
 });

@@ -43,22 +43,7 @@ app.controller('authenticateCtrl', function($scope, $location, $window) {
             //updateStudents(snapshot.val());
             //updateRewards();
             //updateAllRequestedRewards();
-
-            $("h1").text("Welcome " + snapshot.val().Name);
         });
-    };
-
-    $scope.logout = function() {
-        firebase.auth().signOut().then(function() {
-            $scope.loggedOut();
-        }, function(error) {
-            alert(error);
-        });
-    };
-
-    $scope.loggedOut = function(){
-        // This may be quick and dirty, but it works
-        location.reload(true)
     };
 
     firebase.auth().onAuthStateChanged($scope.authStateChanged);
