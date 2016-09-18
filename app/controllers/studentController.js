@@ -78,6 +78,12 @@ app.controller('studentCtrl',  function($scope, $timeout, $window, $location) {
         $scope.Points = $scope.Points - cost;
         alert('You have redeemed ' + item + '!');
         firebase.database().ref('/Students/' + userId +'/Points').set($scope.Points);
+
+        firebase.database().ref('/RequestedRewards').push({
+            Reward: item,
+            Student: $scope.Name
+        });
+
     };
 
     $scope.logout = function() {
