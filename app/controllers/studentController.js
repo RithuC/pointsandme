@@ -1,8 +1,14 @@
 app.controller('studentCtrl',  function($scope, $timeout, $window, $location) {
     $scope.Name = null;
 
+    if(!firebase.auth().currentUser) {
+        $window.location.href = "/views";
+        return;
+    }
+
     var userId = firebase.auth().currentUser.uid;
-    console.log(userId);
+
+
     firebase.database().ref('/Students/' + userId).once('value').then(function(snapshot) {
         var teacher = snapshot.val().Teacher;
 
