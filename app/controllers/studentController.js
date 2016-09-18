@@ -9,27 +9,28 @@ app.controller('studentCtrl',  function($scope, $timeout, $window) {
         $timeout(function() {
             $scope.Name = snapshot.val().Name;
             $scope.Points = snapshot.val().Points;
-        });
 
-        firebase.database().ref('/Rewards/' + teacher + "/").once('value').then(function(snapshot) {
-            console.log(snapshot.val());
-            var rewards = snapshot.val();
+            firebase.database().ref('/Rewards/' + teacher + "/").once('value').then(function(snapshot) {
+                console.log(snapshot.val());
+                var rewards = snapshot.val();
 
-            var reward_list = [];
+                var reward_list = [];
 
-            for (var key in rewards) {
-                if (rewards.hasOwnProperty(key)) {
-                    reward_list.push( {
-                        "Name" : rewards[key].Name,
-                        "Points" : rewards[key].Points
-                    });
+                for (var key in rewards) {
+                    if (rewards.hasOwnProperty(key)) {
+                        reward_list.push( {
+                            "Name" : rewards[key].Name,
+                            "Points" : rewards[key].Points,
+                            "Possible" : (rewards[key].Points <= $scope.Points)
+                        });
+                    }
                 }
-            }
 
-            $timeout(function() {
-                $scope.Rewards = reward_list;
+                $timeout(function() {
+                    $scope.Rewards = reward_list;
+                });
+
             });
-
         });
     });
 });
