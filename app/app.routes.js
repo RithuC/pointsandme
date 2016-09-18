@@ -1,13 +1,16 @@
-var app = angular.module("myApp", ["ngRoute"]);
+/*var app = angular.module("myApp", ["ngRoute"]);  */
 app.config(function($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl : "indexContent.html"
+            templateUrl : "indexContent.html",
+            controller : "myCtrl"
         })
         .when("/dashboard", {
-            templateUrl : "dashboard.html"
+            templateUrl : "dashboard.html",
+            controller : ""
         })
         .when("/studentDEBUG", {
-            templateUrl : "StudentPage.html"
+            templateUrl : "StudentPage.html",
+            controller : "studentCtrl"
     });
 });
