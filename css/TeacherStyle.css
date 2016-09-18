@@ -40,9 +40,13 @@ body {
 }
 
 button {
-	font-size: 10px;
+	font-size: 12px;
 	padding: 0;
 	margin: 0;
+	position: absolute;
+	background-color: #ffba3d;
+	border: 0;
+	right: 5px;
 } 
 
 #profile-picture {
