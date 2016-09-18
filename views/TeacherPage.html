@@ -9,8 +9,8 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="../css/StudentStyle.css">
 	<link rel="stylesheet" href="../app/css/animate.css">
+	<link rel="stylesheet" href="../css/TeacherStyle.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="../app/js/bootstrap.js"></script>
@@ -52,6 +52,20 @@
 		<div class="container-fluid content tab-pane fade in active students">
 			<div class="row" id="student">
 				<div class="container-fluid">
+					<div class="row table-headers">
+						<div class="col-md-3">
+							Name
+						</div>
+						<div class="col-md-3">
+							Email
+						</div>
+						<div class="col-md-3">
+							Points
+						</div>
+						<div class="col-md-3">
+							Stars
+						</div>
+					</div>
 					<div class="row" ng-repeat="x in Students">
 						<div class="col-md-3">
 							{{x.Name}}
