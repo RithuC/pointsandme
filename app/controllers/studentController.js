@@ -87,4 +87,5 @@ app.controller('studentCtrl',  function($scope, $timeout, $window, $location) {
         });
     };
 
+
 });
