@@ -20,18 +20,30 @@ app.controller('teacherCtrl', function($scope, $timeout, $window, $location) {
 					$scope.Name = snapshot.val().Name;
 					$scope.Points = snapshot.val().Points;
 
-					firebase.database().ref('/Students").once('
-						value ').then(function(snapshot) {
+					firebase.database().ref("/Students").once('value').then(function(snapshot) {
 						console.log(snapshot.val());
 						var students = snapshot.val();
 
 						var student_list = [];
 
+						firebase.database().ref("/AchievementsObtained").once('value').then(function(snapshot){
+
+						var achievements = snapshot.val();
+
+
 						for (var key in students) {
 							if (theirs.hasOwnProperty(key)) {
+
+								var stars = 0;
+								for(var k in achievements[key]){
+									stars++;
+								}
+
 								student_list.push({
 									"Name": students[key].Name,
-									"Points": students[key].Points
+									"Points": students[key].Points,
+									"Email" : "email@email.org",
+									"Stars" : stars
 								});
 							}
 						}
@@ -40,21 +52,7 @@ app.controller('teacherCtrl', function($scope, $timeout, $window, $location) {
 							$scope.Students = student_list;
 						});
 					});
+					});
 			});
-
 	});
-
-$scope.redeem = function(cost, item) {
-	$scope.Points = $scope.Points - cost;
-	alert('You have redeemed ' + item + '!');
-};
-
-$scope.logout = function() {
-	firebase.auth().signOut().then(function() {
-		$window.location.href = "/views";
-	}, function(error) {
-		alert(error);
-	});
-};
-
 });
