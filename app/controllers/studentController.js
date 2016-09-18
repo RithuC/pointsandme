@@ -1,11 +1,12 @@
 app.controller('studentCtrl',  function($scope, $timeout, $window) {
-    $scope.name = null;
+    $scope.Name = null;
 
     var userId = firebase.auth().currentUser.uid;
+    console.log(userId);
     firebase.database().ref('/Students/' + userId).once('value').then(function(snapshot) {
         console.log(snapshot.val());
         $timeout(function() {
-            $scope.name = snapshot.val().Name;
+            $scope.Name = snapshot.val().Name;
         });
     });
 });
