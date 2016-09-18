@@ -5,16 +5,6 @@ app.controller('myCtrl', function($scope) {
     $scope.initial = true;
     $scope.goBack = null;
 
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyD-WUhW3_jInlUPmMxV7EInTxx17C0Ba74",
-        authDomain: "pointsandme.firebaseapp.com",
-        databaseURL: "https://pointsandme.firebaseio.com",
-        storageBucket: "pointsandme.appspot.com",
-        messagingSenderId: "48621216513"
-    };
-    firebase.initializeApp(config);
-
     $scope.userType = function (type) {
         if(type === "teacher"){
             $scope.isTeacher = true;
