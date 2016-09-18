@@ -1,4 +1,4 @@
-app.controller('studentCtrl',  ["$scope", "$timeout", "$window", function($scope, $timeout, $window) {
+app.controller('studentCtrl',  function($scope, $timeout, $window) {
     $scope.name = null;
 
     var userId = firebase.auth().currentUser.uid;
@@ -8,4 +8,4 @@ app.controller('studentCtrl',  ["$scope", "$timeout", "$window", function($scope
             $scope.name = snapshot.val().Name;
         });
     });
-}]);
+});
