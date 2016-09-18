@@ -4,10 +4,10 @@ app.config(function($routeProvider) {
         .when("/", {
             templateUrl : "indexContent.html"
         })
-        .when("/dashboard", {
-            templateUrl : "dashboard.html"
+        .when("/teacherPage", {
+            templateUrl : "teachersskeleton.htm"
         })
-        .when("/studentDEBUG", {
+        .when("/studentPage", {
             templateUrl : "StudentPage.html"
-    });
+        });
 });
