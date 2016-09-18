@@ -88,7 +88,7 @@
 			<div class="row">
 				<div ng-repeat="x in Achievements">
 					<div class="col-md-4" ng-class="{'achieved': x.Won, 'not-achieved' : !x.Won}">
-						<img src="../img/pizza.png" id="achievement-picture" ng-if="x.Won" alt="{{x.Description}}">
+						<img src="../img/Achievement_Icon.png" id="achievement-picture" ng-if="x.Won" alt="{{x.Description}}">
 						<img src="../img/question.png" id="achievement-picture" ng-if="!x.Won" alt="{{x.Description}}">
 						<b id="achievement-title">{{x.Name}}</b>
 					</div>
