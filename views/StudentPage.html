@@ -34,7 +34,7 @@
 						<li><a><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
 						<li><a>30 Stars</a></li>
 						<li><a><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span></a></li>
-						<li><a>200 Points</a></li>
+						<li><a>{{Points}} Points</a></li>
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
@@ -53,17 +53,17 @@
 	<div class="tab-content">
 
 		<!-- Rewards begins-->
-		<div class="container-fluid content tab-pane fade in active" id="rewards">
+		<div class="container-fluid content tab-pane fade in active" id="rewards" ng-repeat="x in Rewards">
 			<div class="row" id="reward">
 				<span class="col-md-2">
 					<span class="horizontal-center"><img src="../img/pizza.png" id="reward-picture"></span>
 				</span>
 				<span class="col-md-8">
 					<span class="row">
-						<span id="reward-title">Pizza</span>
+						<span id="reward-title">{{x.Name}}</span>
 					</span>
 					<span class="row">
-						<span id="reward-cost"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> 200 Points</span>
+						<span id="reward-cost"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> {{x.Points}} Points</span>
 					</span>
 
 				</span>
