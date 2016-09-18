@@ -28,8 +28,9 @@ body {
 	margin: 0 auto; 
 }
 
-.achieved {
-	text-shadow: 0 0 3px #f6ff00;
+.data-cell {
+	border-left: 1px solid black;
+	font-size: 14pt;
 }
 
 .table-headers {
@@ -38,9 +39,11 @@ body {
 	border-bottom: 1px solid black;
 }
 
-.data-cell {
-	border-left: 1px solid black;
-}
+button {
+	font-size: 10px;
+	padding: 0;
+	margin: 0;
+} 
 
 #profile-picture {
 	max-height: 64px;
