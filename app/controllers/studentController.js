@@ -8,6 +8,7 @@ app.controller('studentCtrl',  function($scope, $timeout, $window) {
 
         $timeout(function() {
             $scope.Name = snapshot.val().Name;
+            $scope.Points = snapshot.val().Points;
         });
 
         firebase.database().ref('/Rewards/' + teacher + "/").once('value').then(function(snapshot) {
