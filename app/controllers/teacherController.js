@@ -50,7 +50,17 @@ app.controller('teacherCtrl', function ($scope, $timeout, $window, $location) {
                         }
 
                         $timeout(function () {
-                            $scope.Students = student_list;
+
+
+                            firebase.database().ref('/Teachers/' + userId).once('value').then(function(snapshot) {
+                                var teacher = snapshot.val();
+                                var name = teacher.Name;
+
+                                $timeout(function() {
+                                    $scope.Students = student_list;
+                                    $scope.Name = name;
+                                });
+                            });
                         });
                     });
                 });
@@ -59,14 +69,7 @@ app.controller('teacherCtrl', function ($scope, $timeout, $window, $location) {
     };
 
 
-    firebase.database().ref('/Teachers/' + userId).once('value').then(function(snapshot) {
-        var teacher = snapshot.val();
-        var name = teacher.Name;
 
-        $timeout(function() {
-            $scope.Name = name;
-        });
-    });
 
     $scope.updatePoints();
 
