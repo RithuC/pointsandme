@@ -53,30 +53,30 @@
 			<div class="row" id="student">
 				<div class="container-fluid">
 					<div class="row table-headers">
-						<div class="col-md-3">
+						<div class="col-md-3 data-cell">
 							Name
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 data-cell">
 							Email
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 data-cell">
 							Points
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 data-cell">
 							Stars
 						</div>
 					</div>
 					<div class="row" ng-repeat="x in Students">
-						<div class="col-md-3">
+						<div class="col-md-3 data-cell">
 							{{x.Name}}
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 data-cell">
 							{{x.Email}}
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 data-cell">
 							{{x.Points}}
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 data-cell">
 							{{x.Stars}}
 						</div>
 					</div>
@@ -89,18 +89,20 @@
 		<div id="rewards" class="container-fluid content tab-pane fade">
 			<div class="row" id="reward">
 				<div class="container-fluid">
+					<div class="row table-headers">
+						<div class="col-md-6 data-cell">
+							Name
+						</div>
+						<div class="col-md-6 data-cell">
+							Points
+						</div>
+					</div>
 					<div class="row" ng-repeat="x in Rewards">
-						<div class="col-md-3">
+						<div class="col-md-6 data-cell">
 							{{x.Name}}
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-6 data-cell">
 							{{x.Points}}
-						</div>
-						<div class="col-md-3">
-							&nbsp;
-						</div>
-						<div class="col-md-3">
-							&nbsp;
 						</div>
 					</div>
 				</div>
@@ -112,18 +114,20 @@
 		<div id="achievements" class="container-fluid content tab-pane fade">
 			<div class="row" id="achievement">
 				<div class="container-fluid">
+					<div class="row table-headers">
+						<div class="col-md-6 data-cell">
+							Name
+						</div>
+						<div class="col-md-6 data-cell">
+							Description
+						</div>
+					</div>
 					<div class="row" ng-repeat="x in Achievements">
-						<div class="col-md-3">
+						<div class="col-md-6 data-cell">
 							{{x.Name}}
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-6 data-cell">
 							{{x.Description}}
-						</div>
-						<div class="col-md-3">
-							&nbsp;
-						</div>
-						<div class="col-md-3">
-							&nbsp;
 						</div>
 					</div>
 				</div>
