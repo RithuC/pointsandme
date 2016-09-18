@@ -48,6 +48,7 @@ app.controller('teacherCtrl', function ($scope, $timeout, $window, $location) {
                             }
 
                             student_list.push({
+                                "Id" : key,
                                 "Name": students[key].Name,
                                 "Points": students[key].Points,
                                 "Email": "email@email.org",
@@ -112,4 +113,10 @@ app.controller('teacherCtrl', function ($scope, $timeout, $window, $location) {
         });
     };
 
+    $scope.increasePoints = function(student,points) {
+        firebase.database().ref('/Students/' + student + '/Points').once('value').then(function(snapshot) {
+            var old = snapshot.val();
+            firebase.database().ref('/Students/' + student +'/Points').set(old+points);
+        });
+    };
 });
