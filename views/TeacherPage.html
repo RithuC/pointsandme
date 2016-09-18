@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>PointsAndMe</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="../css/StudentStyle.css">
+	<link rel="stylesheet" href="../app/css/animate.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="../app/js/bootstrap.js"></script>
+
+</head>
+
+<body>
+	<!-- Navigation bar start -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+					<div class="navbar-header">
+						<span class="navbar-brand" href="#"><img src="../img/profilePic.png" alt="You!" id="profile-picture"></span>
+					</div>
+
+					<ul class="nav navbar-nav nav-tabs navbar-left">
+						<li><a>{{Name}}</a></li>
+						<li><a><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
+						<li><a>{{Stars}} Stars</a></li>
+						<li><a><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span></a></li>
+						<li><a>{{Points}} Points</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a data-toggle="tab" data-target=".students">Students</a></li>
+						<li><a data-toggle="tab" data-target="#rewards">Rewards</a></li>
+						<li><a data-toggle="tab" data-target="#achievements">Achievements</a></li>
+						<li><a data-toggle="tab" ng-click="logout()">Logout</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- Navigation bar end -->
+
+	<!-- Content begins -->
+	<div class="tab-content">
+
+		<!-- Students begins-->
+		<div class="container-fluid content tab-pane fade in active students">
+			<div class="row" id="student">
+
+			</div>
+		</div>
+		<!-- Students ends -->
+
+		<!-- Rewards begins-->
+		<div id="rewards" class="container-fluid content tab-pane fade">
+			<div class="row">
+				
+			</div>
+		</div>
+		<!-- Rewards end-->
+
+		<!-- Achievements begins-->
+		<div id="achievements" class="container-fluid content tab-pane fade">
+			<div class="row">
+				
+			</div>
+		</div>
+		<!-- Achievements end-->
+
+	</div>
+	<!-- Content ends -->
+</body>
+
