@@ -8,10 +8,14 @@ app.controller('authenticateCtrl', function($scope, $location, $window) {
             .then(function(response) {
                 console.log(response);
                 console.log($window.location.href);
-                $location.path("dashboard.html");
+
+                $scope.$apply(function(){
+                    $location.path("dashboard");
+
+                });
             })
             .catch(function (error) {
-            alert(error);
+                alert(error);
             });
     };
 

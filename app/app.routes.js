@@ -2,9 +2,12 @@ var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl : "../views/index.html"
+            templateUrl : "indexContent.html"
         })
         .when("/dashboard", {
-            templateUrl : "../views/dashboard.html"
-        });
+            templateUrl : "dashboard.html"
+        })
+        .when("/studentDEBUG", {
+            templateUrl : "StudentPage.html"
+    });
 });
