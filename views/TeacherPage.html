@@ -87,16 +87,46 @@
 
 		<!-- Rewards begins-->
 		<div id="rewards" class="container-fluid content tab-pane fade">
-			<div class="row">
-				
+			<div class="row" id="reward">
+				<div class="container-fluid">
+					<div class="row" ng-repeat="x in Rewards">
+						<div class="col-md-3">
+							{{x.Name}}
+						</div>
+						<div class="col-md-3">
+							{{x.Points}}
+						</div>
+						<div class="col-md-3">
+							&nbsp;
+						</div>
+						<div class="col-md-3">
+							&nbsp;
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- Rewards end-->
 
 		<!-- Achievements begins-->
 		<div id="achievements" class="container-fluid content tab-pane fade">
-			<div class="row">
-				
+			<div class="row" id="achievement">
+				<div class="container-fluid">
+					<div class="row" ng-repeat="x in Achievements">
+						<div class="col-md-3">
+							{{x.Name}}
+						</div>
+						<div class="col-md-3">
+							{{x.Description}}
+						</div>
+						<div class="col-md-3">
+							&nbsp;
+						</div>
+						<div class="col-md-3">
+							&nbsp;
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- Achievements end-->
