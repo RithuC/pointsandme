@@ -31,10 +31,6 @@
 
 					<ul class="nav navbar-nav nav-tabs navbar-left">
 						<li><a>{{Name}}</a></li>
-						<li><a><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
-						<li><a>{{Stars}} Stars</a></li>
-						<li><a><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span></a></li>
-						<li><a>{{Points}} Points</a></li>
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
@@ -55,7 +51,22 @@
 		<!-- Students begins-->
 		<div class="container-fluid content tab-pane fade in active students">
 			<div class="row" id="student">
-
+				<div class="container-fluid">
+					<div class="row" ng-repeat="x in Students">
+						<div class="col-md-3">
+							{{x.Name}}
+						</div>
+						<div class="col-md-3">
+							{{x.Email}}
+						</div>
+						<div class="col-md-3">
+							{{x.Points}}
+						</div>
+						<div class="col-md-3">
+							{{x.Stars}}
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- Students ends -->

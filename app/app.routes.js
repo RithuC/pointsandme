@@ -6,7 +6,7 @@ app.config(function($routeProvider) {
             controller : "myCtrl"
         })
         .when("/teacherPage", {
-            templateUrl : "teachersskeleton.htm"
+            templateUrl : "TeacherPage.html"
         })
         .when("/studentPage", {
             templateUrl : "StudentPage.html",
