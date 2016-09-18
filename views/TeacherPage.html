@@ -36,7 +36,6 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active"><a data-toggle="tab" data-target=".students">Students</a></li>
 						<li><a data-toggle="tab" data-target="#rewards">Rewards</a></li>
-						<li><a data-toggle="tab" data-target="#rerewards">Requested Rewards</a></li>
 						<li><a data-toggle="tab" data-target="#achievements">Achievements</a></li>
 						<li><a data-toggle="tab" ng-click="logout()">Logout</a></li>
 					</ul>
@@ -75,7 +74,7 @@
 							{{x.Email}}
 						</div>
 						<div class="col-md-3 data-cell">
-							{{x.Points}} <button ng-click="increasePoints(x.Id,5)"/><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+							{{x.Points}} <button ng-click="increasePoints(x.Id)"/><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
 						</div>
 						<div class="col-md-3 data-cell">
 							{{x.Stars}}
@@ -110,30 +109,6 @@
 			</div>
 		</div>
 		<!-- Rewards end-->
-
-		<div id="rerewards" class="container-fluid content tab-pane fade">
-			<div class="row" id="rereward">
-				<div class="container-fluid">
-					<div class="row table-headers">
-						<div class="col-md-6 data-cell">
-							Name
-						</div>
-						<div class="col-md-6 data-cell">
-							Points
-						</div>
-					</div>
-					<div class="row" ng-repeat="x in ReRewards">
-						<div class="col-md-6 data-cell">
-							{{x.Name}}
-						</div>
-						<div class="col-md-6 data-cell">
-							{{x.Student}}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 
 		<!-- Achievements begins-->
 		<div id="achievements" class="container-fluid content tab-pane fade">

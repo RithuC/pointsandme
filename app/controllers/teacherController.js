@@ -142,7 +142,11 @@ app.controller('teacherCtrl', function ($scope, $timeout, $window, $location) {
 
 
 
-    $scope.increasePoints = function(student,points) {
+    $scope.increasePoints = function(student) {
+
+        var points = prompt("Please the ammount of points you wish to add:", 0);
+        points *= 1;
+
         firebase.database().ref('/Students/' + student + '/Points').once('value').then(function(snapshot) {
             var old = snapshot.val();
             firebase.database().ref('/Students/' + student +'/Points').set(old+points);
