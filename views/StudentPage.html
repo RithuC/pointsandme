@@ -38,7 +38,7 @@
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a data-toggle="tab" data-target="#rewards">Rewards</a></li>
+						<li class="active"><a data-toggle="tab" data-target=".rewards">Rewards</a></li>
 						<li><a data-toggle="tab" data-target="#achievements">Achievements</a></li>
 						<!-- <li><a data-toggle="tab" href="#">Tasks</a></li> -->
 						<li><a data-toggle="tab" ng-click="logout()">Logout</a></li>
@@ -53,7 +53,7 @@
 	<div class="tab-content">
 
 		<!-- Rewards begins-->
-		<div class="container-fluid content tab-pane fade in active" id="rewards" ng-repeat="x in Rewards">
+		<div class="container-fluid content tab-pane fade in active rewards" ng-repeat="x in Rewards">
 			<div class="row" id="reward">
 				<span class="col-md-2">
 					<span class="horizontal-center"><img src="../img/pizza.png" id="reward-picture"></span>
