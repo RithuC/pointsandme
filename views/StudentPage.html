@@ -82,17 +82,11 @@
 		<!-- Achievements begins-->
 		<div id="achievements" class="container-fluid content tab-pane fade">
 			<div class="row">
-				<div class="col-md-4 achieved">
-					<img src="../img/pizza.png" id="achievement-picture">
-					<b id="achievement-title">Name of Achievement</b>
-				</div>
-				<div class="col-md-4 not-achieved">
-					<img src="../img/question.png" id="achievement-picture">
-					<b id="achievement-title">Name of Achievement</b>
-				</div>
-				<div class="col-md-4 not-achieved">
-					<img src="../img/question.png" id="achievement-picture">
-					<b id="achievement-title">Name of Achievement</b>
+				<div ng-repeat="x in Achievements">
+					<div class="col-md-4 achieved">
+						<img src="../img/pizza.png" id="achievement-picture">
+						<b id="achievement-title">{{x.Name}}</b>
+					</div>
 				</div>
 			</div>
 		</div>
