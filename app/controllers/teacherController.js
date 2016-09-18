@@ -93,25 +93,31 @@ app.controller('teacherCtrl', function ($scope, $timeout, $window, $location) {
         });
     });
 
-    firebase.database().ref('/RequestedRewards').once('value').then(function (snapshot) {
-        var rewards = snapshot.val();
+    $scope.updateRequested = function(){
+        firebase.database().ref('/RequestedRewards').once('value').then(function (snapshot) {
+            var rewards = snapshot.val();
 
 
-        var reward_list = [];
-        for (var key in rewards) {
-            if (rewards.hasOwnProperty(key)) {
-                reward_list.push({
-                    "Name": rewards[key].Reward,
-                    "Student": rewards[key].Student,
-                });
+            var reward_list = [];
+            for (var key in rewards) {
+                if (rewards.hasOwnProperty(key)) {
+                    reward_list.push({
+                        "Id" : key,
+                        "Name": rewards[key].Reward,
+                        "Student": rewards[key].Student,
+                    });
+                }
+
             }
 
-        }
-
-        $timeout(function () {
-            $scope.ReRewards = reward_list;
+            $timeout(function () {
+                $scope.ReRewards = reward_list;
+            });
         });
-    });
+    };
+
+    $scope.updateRequested();
+
 
     firebase.database().ref('/Achievements/' + userId).once('value').then(function (snapshot) {
         var achievements = snapshot.val();
@@ -152,5 +158,10 @@ app.controller('teacherCtrl', function ($scope, $timeout, $window, $location) {
             firebase.database().ref('/Students/' + student +'/Points').set(old+points);
             $scope.updatePoints();
         });
+    };
+
+    $scope.requestDone = function(requestId) {
+        firebase.database().ref('/RequestedRewards').child(requestId).remove();
+        $scope.updateRequested();
     };
 });
