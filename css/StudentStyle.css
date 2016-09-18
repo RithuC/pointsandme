@@ -2,6 +2,10 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
+body {
+	background-color: #ffba3d!important;
+}
+
 .content {
 	position: relative;
 	top: 200px;
@@ -33,7 +37,9 @@
 }
 
 #reward {
-	background-color: red;
+	border: 2px solid grey;
+	border-radius: 10px;
+	margin: 15px;
 }
 
 #reward-picture {
